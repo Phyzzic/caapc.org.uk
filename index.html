@@ -1,0 +1,1578 @@
+<!DOCTYPE html>
+<html lang="en" class="govuk-template">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="theme-color" content="#0b0c0c">
+  <meta name="description" content="Official UK portal for reporting non-compliant pixel companies, virtual asset fraud, in-game server misconduct, and digital corporate infractions under the Central Authority Against Pixel Crime (CAAPC).">
+  <title>Report a Non-Compliant Pixel Company – Central Authority Against Pixel Crime (CAAPC) – GOV.UK</title>
+
+  <style>
+    /* ==========================================================================
+       1. ROOT VARIABLES & DESIGN TOKENS (GOV.UK DESIGN SYSTEM)
+       ========================================================================== */
+    :root {
+      --govuk-black: #0b0c0c;
+      --govuk-white: #ffffff;
+      --govuk-text: #0b0c0c;
+      --govuk-secondary-text: #505a5f;
+      --govuk-blue: #1d70b8;
+      --govuk-blue-hover: #003078;
+      --govuk-dark-blue: #002d62;
+      --govuk-light-blue: #2b8cc4;
+      --govuk-green: #00703c;
+      --govuk-green-hover: #005a30;
+      --govuk-grey-light: #f3f2f1;
+      --govuk-grey-mid: #f8f8f8;
+      --govuk-grey-border: #b1b4b6;
+      --govuk-grey-dark: #383f43;
+      --govuk-focus-yellow: #ffdd00;
+      --govuk-error-red: #d4351c;
+      --govuk-error-red-hover: #a8220d;
+      --govuk-success-green: #00703c;
+      --govuk-warning-brown: #f47738;
+      --govuk-font-family: "GDS Transport", Arial, sans-serif;
+      --govuk-font-mono: "Courier New", Courier, monospace;
+      --govuk-max-width: 1020px;
+      --govuk-border-radius: 0px;
+    }
+
+    /* ==========================================================================
+       2. BASE & CSS RESET
+       ========================================================================== */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      font-family: var(--govuk-font-family);
+      background-color: var(--govuk-grey-light);
+      color: var(--govuk-text);
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      font-size: 19px;
+      line-height: 1.31579;
+    }
+
+    body {
+      background-color: var(--govuk-white);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* ==========================================================================
+       3. TYPOGRAPHY & HEADINGS
+       ========================================================================== */
+    h1, h2, h3, h4, h5, h6 {
+      font-weight: 700;
+      color: var(--govuk-black);
+      clear: both;
+    }
+
+    h1.govuk-heading-xl {
+      font-size: 44px;
+      line-height: 1.1;
+      margin-bottom: 25px;
+      letter-spacing: -1px;
+    }
+
+    h2.govuk-heading-l {
+      font-size: 32px;
+      line-height: 1.15;
+      margin-top: 35px;
+      margin-bottom: 20px;
+    }
+
+    h3.govuk-heading-m {
+      font-size: 24px;
+      line-height: 1.25;
+      margin-top: 25px;
+      margin-bottom: 15px;
+    }
+
+    h4.govuk-heading-s {
+      font-size: 19px;
+      line-height: 1.3;
+      margin-top: 20px;
+      margin-bottom: 10px;
+    }
+
+    p.govuk-body {
+      margin-bottom: 20px;
+      font-size: 19px;
+      line-height: 1.4;
+      color: var(--govuk-text);
+    }
+
+    p.govuk-body-s {
+      font-size: 16px;
+      line-height: 1.35;
+      margin-bottom: 15px;
+      color: var(--govuk-secondary-text);
+    }
+
+    p.govuk-body-l {
+      font-size: 24px;
+      line-height: 1.3;
+      margin-bottom: 25px;
+    }
+
+    .govuk-hint {
+      font-size: 16px;
+      color: var(--govuk-secondary-text);
+      margin-bottom: 10px;
+      display: block;
+      line-height: 1.35;
+    }
+
+    .govuk-inset-text {
+      border-left: 10px solid var(--govuk-blue);
+      padding: 15px 20px;
+      margin: 25px 0;
+      background-color: var(--govuk-grey-mid);
+      font-size: 18px;
+      line-height: 1.4;
+    }
+
+    .govuk-inset-text--warning {
+      border-left-color: var(--govuk-warning-brown);
+      background-color: #fff9f5;
+    }
+
+    .govuk-warning-text {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      margin: 25px 0;
+      padding: 15px;
+      background-color: #fff8ed;
+      border: 1px solid var(--govuk-warning-brown);
+    }
+
+    .govuk-warning-text__icon {
+      font-size: 28px;
+      font-weight: 900;
+      background: var(--govuk-black);
+      color: var(--govuk-focus-yellow);
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .govuk-warning-text__text {
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--govuk-black);
+    }
+
+    /* ==========================================================================
+       4. ACCESSIBILITY & HEADER BAR
+       ========================================================================== */
+    .govuk-cookie-banner {
+      background-color: var(--govuk-grey-light);
+      border-bottom: 4px solid var(--govuk-grey-border);
+      padding: 15px 0;
+      font-size: 16px;
+    }
+
+    .govuk-cookie-banner__container {
+      max-width: var(--govuk-max-width);
+      margin: 0 auto;
+      padding: 0 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+
+    .govuk-accessibility-bar {
+      background-color: var(--govuk-black);
+      color: var(--govuk-white);
+      font-size: 14px;
+      padding: 8px 0;
+      border-bottom: 1px solid #222;
+    }
+
+    .govuk-accessibility-bar__container {
+      max-width: var(--govuk-max-width);
+      margin: 0 auto;
+      padding: 0 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .govuk-accessibility-bar__btn {
+      background: none;
+      border: 1px solid #505a5f;
+      color: #fff;
+      padding: 3px 10px;
+      font-size: 13px;
+      cursor: pointer;
+      margin-left: 6px;
+      transition: background 0.2s ease;
+    }
+
+    .govuk-accessibility-bar__btn:hover {
+      background: #333;
+      border-color: #fff;
+    }
+
+    /* ==========================================================================
+       5. MAIN GOV.UK HEADER & NAVIGATION
+       ========================================================================== */
+    .govuk-header {
+      background-color: var(--govuk-black);
+      color: var(--govuk-white);
+      border-bottom: 10px solid var(--govuk-blue);
+    }
+
+    .govuk-header__container {
+      max-width: var(--govuk-max-width);
+      margin: 0 auto;
+      padding: 15px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+
+    .govuk-header__logo {
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+      color: var(--govuk-white);
+      font-weight: 700;
+      font-size: 26px;
+      letter-spacing: -0.5px;
+    }
+
+    .govuk-header__logo-coat {
+      margin-right: 14px;
+      fill: currentColor;
+    }
+
+    .govuk-header__department {
+      border-left: 2px solid #3d3d3d;
+      padding-left: 14px;
+      margin-left: 14px;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 1.2;
+      color: #dfdfdf;
+    }
+
+    .govuk-header__domain {
+      font-size: 14px;
+      color: #b1b4b6;
+      font-weight: 400;
+      background: #1c1f21;
+      padding: 4px 10px;
+      border-radius: 3px;
+      border: 1px solid #333;
+    }
+
+    /* ==========================================================================
+       6. SERVICE NAVIGATION & BREADCRUMBS
+       ========================================================================== */
+    .govuk-service-navigation {
+      background-color: var(--govuk-grey-mid);
+      border-bottom: 1px solid var(--govuk-grey-border);
+      padding: 10px 0;
+    }
+
+    .govuk-service-navigation__container {
+      max-width: var(--govuk-max-width);
+      margin: 0 auto;
+      padding: 0 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .govuk-service-navigation__service-name {
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--govuk-black);
+      text-decoration: none;
+    }
+
+    .govuk-phase-banner {
+      max-width: var(--govuk-max-width);
+      margin: 0 auto;
+      padding: 12px 20px;
+      border-bottom: 1px solid var(--govuk-grey-border);
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      font-size: 15px;
+    }
+
+    .govuk-tag {
+      background-color: var(--govuk-blue);
+      color: var(--govuk-white);
+      font-weight: 700;
+      padding: 3px 8px;
+      font-size: 12px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      display: inline-block;
+    }
+
+    .govuk-breadcrumbs {
+      max-width: var(--govuk-max-width);
+      margin: 18px auto 0 auto;
+      padding: 0 20px;
+    }
+
+    .govuk-breadcrumbs__list {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      font-size: 16px;
+    }
+
+    .govuk-breadcrumbs__list-item::after {
+      content: "›";
+      margin-left: 10px;
+      color: var(--govuk-secondary-text);
+      font-weight: bold;
+    }
+
+    .govuk-breadcrumbs__list-item:last-child::after {
+      content: "";
+    }
+
+    .govuk-breadcrumbs__link {
+      color: var(--govuk-text);
+      text-decoration: underline;
+    }
+
+    .govuk-breadcrumbs__link:hover {
+      color: var(--govuk-blue-hover);
+    }
+
+    /* ==========================================================================
+       7. MAIN LAYOUT GRID
+       ========================================================================== */
+    .govuk-width-container {
+      max-width: var(--govuk-max-width);
+      margin: 30px auto;
+      padding: 0 20px;
+      flex: 1;
+      width: 100%;
+    }
+
+    .govuk-grid-row {
+      display: flex;
+      flex-wrap: wrap;
+      margin: 0 -15px;
+    }
+
+    .govuk-grid-column-two-thirds {
+      width: 66.6666%;
+      padding: 0 15px;
+    }
+
+    .govuk-grid-column-one-third {
+      width: 33.3333%;
+      padding: 0 15px;
+    }
+
+    .govuk-grid-column-full {
+      width: 100%;
+      padding: 0 15px;
+    }
+
+    @media (max-width: 768px) {
+      .govuk-grid-column-two-thirds,
+      .govuk-grid-column-one-third {
+        width: 100%;
+      }
+    }
+
+    /* ==========================================================================
+       8. WIZARD STEP NAVIGATION BAR
+       ========================================================================== */
+    .govuk-step-nav {
+      border-top: 3px solid var(--govuk-black);
+      padding-top: 15px;
+      margin-bottom: 35px;
+      display: flex;
+      justify-content: space-between;
+      list-style: none;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .govuk-step-nav__item {
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--govuk-secondary-text);
+      padding: 6px 10px;
+      background: var(--govuk-grey-mid);
+      border: 1px solid var(--govuk-grey-border);
+      flex: 1;
+      text-align: center;
+      min-width: 110px;
+    }
+
+    .govuk-step-nav__item--active {
+      color: var(--govuk-white);
+      background-color: var(--govuk-blue);
+      border-color: var(--govuk-blue-hover);
+    }
+
+    .govuk-step-nav__item--completed {
+      color: var(--govuk-white);
+      background-color: var(--govuk-green);
+      border-color: var(--govuk-green-hover);
+    }
+
+    /* ==========================================================================
+       9. FORM CONTROLS & INPUTS
+       ========================================================================== */
+    .govuk-fieldset {
+      border: none;
+      margin-bottom: 35px;
+    }
+
+    .govuk-fieldset__legend {
+      font-size: 26px;
+      font-weight: 700;
+      margin-bottom: 20px;
+      display: block;
+      border-bottom: 2px solid var(--govuk-grey-border);
+      padding-bottom: 8px;
+      width: 100%;
+    }
+
+    .govuk-form-group {
+      margin-bottom: 30px;
+    }
+
+    .govuk-form-group--error {
+      border-left: 5px solid var(--govuk-error-red);
+      padding-left: 18px;
+    }
+
+    .govuk-error-message {
+      color: var(--govuk-error-red);
+      font-weight: 700;
+      font-size: 16px;
+      margin-bottom: 10px;
+      display: block;
+    }
+
+    .govuk-label {
+      display: block;
+      font-size: 19px;
+      font-weight: 700;
+      margin-bottom: 6px;
+      color: var(--govuk-black);
+    }
+
+    .govuk-input,
+    .govuk-select,
+    .govuk-textarea {
+      width: 100%;
+      padding: 12px;
+      font-size: 18px;
+      font-family: inherit;
+      border: 2px solid var(--govuk-black);
+      border-radius: 0;
+      background-color: #fff;
+      box-shadow: none;
+    }
+
+    .govuk-input--width-30 { max-width: 500px; }
+    .govuk-input--width-20 { max-width: 360px; }
+    .govuk-input--width-10 { max-width: 200px; }
+    .govuk-input--width-5  { max-width: 110px; }
+
+    .govuk-input:focus,
+    .govuk-select:focus,
+    .govuk-textarea:focus {
+      outline: 3px solid var(--govuk-focus-yellow);
+      outline-offset: 0;
+      box-shadow: inset 0 0 0 2px var(--govuk-black);
+    }
+
+    .govuk-textarea {
+      min-height: 260px;
+      resize: vertical;
+      line-height: 1.4;
+    }
+
+    .govuk-character-count {
+      font-size: 14px;
+      color: var(--govuk-secondary-text);
+      margin-top: 6px;
+      text-align: right;
+    }
+
+    .govuk-checkboxes__item,
+    .govuk-radios__item {
+      display: flex;
+      align-items: flex-start;
+      margin-bottom: 15px;
+      background: var(--govuk-grey-mid);
+      padding: 12px;
+      border: 1px solid var(--govuk-grey-border);
+    }
+
+    .govuk-checkboxes__input,
+    .govuk-radios__input {
+      width: 26px;
+      height: 26px;
+      cursor: pointer;
+      margin-right: 14px;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    .govuk-checkboxes__label,
+    .govuk-radios__label {
+      font-size: 18px;
+      cursor: pointer;
+      line-height: 1.3;
+    }
+
+    .govuk-dropzone {
+      border: 2px dashed var(--govuk-black);
+      background-color: var(--govuk-grey-mid);
+      padding: 35px 20px;
+      text-align: center;
+      cursor: pointer;
+      transition: background 0.2s ease, border-color 0.2s ease;
+    }
+
+    .govuk-dropzone:hover {
+      background-color: #e8e8e8;
+      border-color: var(--govuk-blue);
+    }
+
+    /* ==========================================================================
+       10. BUTTONS & ACTIONS
+       ========================================================================== */
+    .govuk-button {
+      background-color: var(--govuk-green);
+      color: var(--govuk-white);
+      font-size: 19px;
+      font-weight: 700;
+      padding: 12px 28px;
+      border: none;
+      box-shadow: 0 3px 0 #002d18;
+      cursor: pointer;
+      display: inline-block;
+      text-decoration: none;
+      margin-right: 15px;
+      margin-bottom: 15px;
+      transition: background 0.15s ease;
+    }
+
+    .govuk-button:hover {
+      background-color: var(--govuk-green-hover);
+    }
+
+    .govuk-button:active {
+      transform: translateY(2px);
+      box-shadow: 0 1px 0 #002d18;
+    }
+
+    .govuk-button--secondary {
+      background-color: var(--govuk-grey-light);
+      color: var(--govuk-black);
+      box-shadow: 0 3px 0 var(--govuk-grey-border);
+      border: 1px solid var(--govuk-grey-border);
+    }
+
+    .govuk-button--secondary:hover {
+      background-color: #e5e5e5;
+    }
+
+    .govuk-button--warning {
+      background-color: var(--govuk-error-red);
+      box-shadow: 0 3px 0 var(--govuk-error-red-hover);
+    }
+
+    .govuk-button--warning:hover {
+      background-color: var(--govuk-error-red-hover);
+    }
+
+    /* ==========================================================================
+       11. ERROR SUMMARY & MESSAGES
+       ========================================================================== */
+    .govuk-error-summary {
+      border: 5px solid var(--govuk-error-red);
+      padding: 25px;
+      margin-bottom: 35px;
+      background-color: #fff;
+      display: none;
+    }
+
+    .govuk-error-summary__title {
+      font-size: 24px;
+      font-weight: 700;
+      color: var(--govuk-error-red);
+      margin-bottom: 15px;
+    }
+
+    .govuk-error-summary__list {
+      list-style: square;
+      padding-left: 22px;
+      color: var(--govuk-error-red);
+      font-weight: bold;
+    }
+
+    .govuk-error-summary__list a {
+      color: var(--govuk-error-red);
+      text-decoration: underline;
+    }
+
+    /* ==========================================================================
+       12. TABLES & SUMMARY LISTS
+       ========================================================================== */
+    .govuk-summary-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 35px;
+      font-size: 17px;
+    }
+
+    .govuk-summary-table th, 
+    .govuk-summary-table td {
+      border-bottom: 1px solid var(--govuk-grey-border);
+      padding: 14px;
+      text-align: left;
+      vertical-align: top;
+    }
+
+    .govuk-summary-table th {
+      width: 32%;
+      font-weight: 700;
+      background-color: var(--govuk-grey-mid);
+    }
+
+    /* ==========================================================================
+       13. SIDEBAR CARDS & ACCORDION
+       ========================================================================== */
+    .govuk-sidebar-card {
+      border-top: 5px solid var(--govuk-blue);
+      background-color: var(--govuk-grey-light);
+      padding: 22px;
+      margin-bottom: 25px;
+      border-left: 1px solid var(--govuk-grey-border);
+      border-right: 1px solid var(--govuk-grey-border);
+      border-bottom: 1px solid var(--govuk-grey-border);
+    }
+
+    .govuk-sidebar-card__title {
+      font-size: 20px;
+      font-weight: 700;
+      margin-bottom: 15px;
+      color: var(--govuk-black);
+    }
+
+    .govuk-sidebar-card__list {
+      list-style: none;
+      font-size: 15px;
+    }
+
+    .govuk-sidebar-card__list li {
+      margin-bottom: 12px;
+      padding-bottom: 10px;
+      border-bottom: 1px dashed var(--govuk-grey-border);
+    }
+
+    .govuk-accordion {
+      border-top: 1px solid var(--govuk-grey-border);
+      margin-top: 30px;
+    }
+
+    .govuk-accordion__section {
+      border-bottom: 1px solid var(--govuk-grey-border);
+    }
+
+    .govuk-accordion__header {
+      padding: 15px 0;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-weight: 700;
+      font-size: 18px;
+    }
+
+    .govuk-accordion__header:hover {
+      color: var(--govuk-blue);
+    }
+
+    .govuk-accordion__content {
+      padding: 15px 0 25px 0;
+      display: none;
+      font-size: 16px;
+      line-height: 1.4;
+    }
+
+    /* ==========================================================================
+       14. PROCESSING CONSOLE & ANIMATION
+       ========================================================================== */
+    #processing-screen {
+      display: none;
+      text-align: center;
+      padding: 70px 20px;
+    }
+
+    .govuk-spinner {
+      width: 70px;
+      height: 70px;
+      border: 8px solid var(--govuk-grey-light);
+      border-top: 8px solid var(--govuk-blue);
+      border-radius: 50%;
+      animation: spin 0.8s linear infinite;
+      margin: 35px auto;
+    }
+
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+
+    .processing-status-log {
+      font-family: var(--govuk-font-mono);
+      font-size: 14px;
+      background: var(--govuk-black);
+      color: #00ff66;
+      padding: 20px;
+      max-width: 680px;
+      margin: 25px auto;
+      text-align: left;
+      height: 160px;
+      overflow-y: auto;
+      border: 2px solid #333;
+    }
+
+    /* ==========================================================================
+       15. FINAL HARSH PUNCHLINE CONFIRMATION SCREEN
+       ========================================================================== */
+    #confirmation-panel {
+      display: none;
+    }
+
+    .govuk-panel--confirmation {
+      background-color: var(--govuk-green);
+      color: var(--govuk-white);
+      padding: 45px 30px;
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .govuk-panel__title {
+      font-size: 40px;
+      font-weight: 700;
+      margin-bottom: 20px;
+      line-height: 1.1;
+    }
+
+    .govuk-panel__body {
+      font-size: 26px;
+      font-weight: 700;
+      line-height: 1.35;
+      padding: 25px;
+      background: rgba(0, 0, 0, 0.32);
+      border: 3px dashed #ffffff;
+      margin-top: 20px;
+    }
+
+    .govuk-panel__reference {
+      font-size: 19px;
+      margin-top: 30px;
+      opacity: 0.95;
+    }
+
+    .punchline-notice-box {
+      padding: 25px;
+      border: 5px solid var(--govuk-error-red);
+      background-color: #fff;
+      margin-top: 35px;
+      margin-bottom: 35px;
+    }
+
+    /* ==========================================================================
+       16. FOOTER
+       ========================================================================== */
+    .govuk-footer {
+      background-color: var(--govuk-grey-light);
+      border-top: 2px solid var(--govuk-grey-border);
+      padding: 50px 0;
+      margin-top: auto;
+      font-size: 15px;
+      color: var(--govuk-secondary-text);
+    }
+
+    .govuk-footer__container {
+      max-width: var(--govuk-max-width);
+      margin: 0 auto;
+      padding: 0 20px;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 25px;
+    }
+
+    .govuk-footer__links {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      margin-bottom: 15px;
+    }
+
+    .govuk-footer__link {
+      color: var(--govuk-secondary-text);
+      text-decoration: underline;
+    }
+
+    /* High Contrast Toggle Mode */
+    body.high-contrast {
+      background-color: #000 !important;
+      color: #fff !important;
+    }
+    body.high-contrast .govuk-width-container,
+    body.high-contrast .govuk-sidebar-card,
+    body.high-contrast .govuk-inset-text {
+      background-color: #111 !important;
+      color: #fff !important;
+      border-color: #fff !important;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="govuk-cookie-banner" id="cookie-banner">
+    <div class="govuk-cookie-banner__container">
+      <div>
+        <strong>Cookies on CAAPC GOV.UK</strong>
+        <p class="govuk-body-s" style="margin-bottom:0;">We use essential telemetry cookies to track non-compliant pixel companies and log futile ticket submissions.</p>
+      </div>
+      <div>
+        <button class="govuk-button" style="margin-bottom:0; padding:6px 15px; font-size:14px;" onclick="document.getElementById('cookie-banner').style.display='none'">Accept Cookies</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="govuk-accessibility-bar">
+    <div class="govuk-accessibility-bar__container">
+      <span>Official Portal: <strong>caapc.org.uk</strong> | Central Authority Against Pixel Crime</span>
+      <div>
+        <button class="govuk-accessibility-bar__btn" onclick="toggleContrast()">High Contrast Mode</button>
+        <button class="govuk-accessibility-bar__btn" onclick="adjustTextSize(1)">A+</button>
+        <button class="govuk-accessibility-bar__btn" onclick="adjustTextSize(-1)">A-</button>
+      </div>
+    </div>
+  </div>
+
+  <header class="govuk-header">
+    <div class="govuk-header__container">
+      <a href="#" class="govuk-header__logo">
+        <svg class="govuk-header__logo-coat" width="36" height="32" viewBox="0 0 36 32">
+          <path d="M22.6 10.4c-.1-.3-.5-.5-.8-.5h-2.4c-.3 0-.6.2-.7.5l-.8 2.2h-3.8l-.8-2.2c-.1-.3-.4-.5-.7-.5h-2.4c-.3 0-.7.2-.8.5L7.1 19.3H4.4c-.4 0-.8.3-.8.8v2.4c0 .4.3.8.8.8h3.5c.4 0 .8-.3.8-.8v-.8h3.8v.8c0 .4.3.8.8.8h2.4c.4 0 .8-.3.8-.8v-.8h3.8v.8c0 .4.3.8.8.8h3.5c.4 0 .8-.3.8-.8v-2.4c0-.4-.3-.8-.8-.8h-2.7l-2.5-8.9zm-8.8 6.2l1.2-3.8 1.2 3.8h-2.4z"/>
+        </svg>
+        GOV.UK
+        <span class="govuk-header__department">CAAPC</span>
+      </a>
+      <span class="govuk-header__domain">Central Authority Against Pixel Crime (caapc.org.uk)</span>
+    </div>
+  </header>
+
+  <div class="govuk-service-navigation">
+    <div class="govuk-service-navigation__container">
+      <span class="govuk-service-navigation__service-name">Virtual Enterprise & Gaming Misconduct Enforcement Portal</span>
+    </div>
+  </div>
+
+  <div class="govuk-phase-banner">
+    <span class="govuk-tag">OFFICIAL BETA</span>
+    <span>Statutory compliance platform for virtual asset fraud, server owner misconduct, and pixel group infractions.</span>
+  </div>
+
+  <div class="govuk-breadcrumbs">
+    <ol class="govuk-breadcrumbs__list">
+      <li class="govuk-breadcrumbs__list-item"><a class="govuk-breadcrumbs__link" href="#">Home</a></li>
+      <li class="govuk-breadcrumbs__list-item"><a class="govuk-breadcrumbs__link" href="#">Digital Enterprise Oversight</a></li>
+      <li class="govuk-breadcrumbs__list-item"><a class="govuk-breadcrumbs__link" href="#">Virtual Communities Enforcement</a></li>
+      <li class="govuk-breadcrumbs__list-item">Report a Pixel Company</li>
+    </ol>
+  </div>
+
+  <div class="govuk-width-container">
+    <div class="govuk-grid-row">
+
+      <div class="govuk-grid-column-two-thirds">
+
+        <div class="govuk-error-summary" id="error-summary">
+          <h2 class="govuk-error-summary__title">There is a problem with your submission</h2>
+          <ul class="govuk-error-summary__list" id="error-summary-list"></ul>
+        </div>
+
+        <div id="form-wizard-container">
+
+          <h1 class="govuk-heading-xl">Report a Non-Compliant Pixel Company or Gaming Entity</h1>
+
+          <p class="govuk-body">Use this official government service to submit a formal investigation dossier under Section 14 of the <strong>Virtual Asset & Pixel Misconduct Act 2024</strong>. All submitted complaints are indexed into the central statutory repository.</p>
+
+          <div class="govuk-inset-text">
+            Ensure you have prepared all evidence including platform user handles, unique server IDs, transaction references, and audit screenshot logs before proceeding.
+          </div>
+
+          <ul class="govuk-step-nav">
+            <li class="govuk-step-nav__item govuk-step-nav__item--active" id="step-nav-1">1. User Profile</li>
+            <li class="govuk-step-nav__item" id="step-nav-2">2. Accused Entity</li>
+            <li class="govuk-step-nav__item" id="step-nav-3">3. Reason</li>
+            <li class="govuk-step-nav__item" id="step-nav-4">4. Asset Losses</li>
+            <li class="govuk-step-nav__item" id="step-nav-5">5. Dispute Logs</li>
+            <li class="govuk-step-nav__item" id="step-nav-6">6. Proof Upload</li>
+            <li class="govuk-step-nav__item" id="step-nav-7">7. Review</li>
+          </ul>
+
+          <form id="caapc-master-form" onsubmit="return false;" novalidate>
+
+            <div class="form-step" id="step-1">
+              <fieldset class="govuk-fieldset">
+                <legend class="govuk-fieldset__legend">Step 1: Your Digital Profile Information</legend>
+
+                <div class="govuk-form-group" id="group-username">
+                  <label class="govuk-label" for="user-handle">Platform Handle / Gaming Username</label>
+                  <span class="govuk-hint">Your primary username on the gaming platform where the incident occurred.</span>
+                  <input class="govuk-input govuk-input--width-20" id="user-handle" type="text" placeholder="e.g. PixelCommander99">
+                </div>
+
+                <div class="govuk-form-group" id="group-userid">
+                  <label class="govuk-label" for="user-id-number">Numeric Account / User ID</label>
+                  <span class="govuk-hint">Unique numerical user ID tied to your account profile.</span>
+                  <input class="govuk-input govuk-input--width-10" id="user-id-number" type="number" placeholder="884102">
+                </div>
+
+                <div class="govuk-form-group" id="group-contact-discord">
+                  <label class="govuk-label" for="contact-discord">Communication Handle (Discord Tag)</label>
+                  <span class="govuk-hint">Used for correspondence with statutory compliance officers.</span>
+                  <input class="govuk-input govuk-input--width-20" id="contact-discord" type="text" placeholder="username_v2">
+                </div>
+
+                <div class="govuk-form-group" id="group-platform-type">
+                  <label class="govuk-label" for="platform-type">Gaming Platform / Ecosystem</label>
+                  <span class="govuk-hint">Select the platform where the pixel company operates.</span>
+                  <select class="govuk-select" id="platform-type">
+                    <option value="">-- Select gaming platform --</option>
+                    <option value="Roblox Virtual Enterprise System">Roblox Virtual Enterprise System</option>
+                    <option value="Minecraft Private Guild Network">Minecraft Private Guild Network</option>
+                    <option value="FiveM / GTA V Roleplay Server Network">FiveM / GTA V Roleplay Server Network</option>
+                    <option value="Discord Independent Virtual Firm">Discord Independent Virtual Firm</option>
+                    <option value="Custom Pixel Realm / Other">Custom Pixel Realm / Other</option>
+                  </select>
+                </div>
+
+              </fieldset>
+
+              <button class="govuk-button" type="button" onclick="goToStep(2)">Save and Continue</button>
+            </div>
+
+            <div class="form-step" id="step-2" style="display: none;">
+              <fieldset class="govuk-fieldset">
+                <legend class="govuk-fieldset__legend">Step 2: Accused Pixel Company & Server Details</legend>
+
+                <div class="govuk-form-group" id="group-target-name">
+                  <label class="govuk-label" for="target-group-name">Pixel Company / Enterprise Name</label>
+                  <span class="govuk-hint">Exact title as listed on the group registry, guild roster, or server header.</span>
+                  <input class="govuk-input" id="target-group-name" type="text" placeholder="e.g. Apex Police Department / Royal Cafe Studios / Shadow Syndicate">
+                </div>
+
+                <div class="govuk-form-group" id="group-target-id">
+                  <label class="govuk-label" for="target-group-id">Company Unique Identifier / Server ID</label>
+                  <span class="govuk-hint">Numeric or alphanumeric ID of the target group, server, or guild.</span>
+                  <input class="govuk-input govuk-input--width-10" id="target-group-id" type="text" placeholder="1049281">
+                </div>
+
+                <div class="govuk-form-group" id="group-owner-name">
+                  <label class="govuk-label" for="target-owner-name">Company Founder / Owner Username</label>
+                  <span class="govuk-hint">Current holder of the primary administrative owner title.</span>
+                  <input class="govuk-input govuk-input--width-20" id="target-owner-name" type="text" placeholder="OwnerUsername">
+                </div>
+
+                <div class="govuk-form-group" id="group-place-id">
+                  <label class="govuk-label" for="target-place-id">In-Game Realm / World Map ID (Optional)</label>
+                  <span class="govuk-hint">Specific world map or instance ID where the breach took place.</span>
+                  <input class="govuk-input govuk-input--width-10" id="target-place-id" type="text" placeholder="98234112">
+                </div>
+
+              </fieldset>
+
+              <button class="govuk-button govuk-button--secondary" type="button" onclick="goToStep(1)">Back</button>
+              <button class="govuk-button" type="button" onclick="goToStep(3)">Save and Continue</button>
+            </div>
+
+            <div class="form-step" id="step-3" style="display: none;">
+              <fieldset class="govuk-fieldset">
+                <legend class="govuk-fieldset__legend">Step 3: Reason for Your Complaint</legend>
+
+                <div class="govuk-form-group" id="group-incident-date">
+                  <label class="govuk-label" for="incident-date">Date Misconduct Occurred</label>
+                  <input class="govuk-input govuk-input--width-10" id="incident-date" type="date">
+                </div>
+
+                <div class="govuk-form-group" id="group-reason">
+                  <label class="govuk-label" for="complaint-reason">Write out the full reason for your complaint in your own words</label>
+                  <span class="govuk-hint">
+                    Explain exactly what happened. Detail broken promises, unfair bans, power-tripping middle ranks, stolen gamepasses, revoked privileges, or ignored appeals.
+                  </span>
+                  <textarea class="govuk-textarea" id="complaint-reason" oninput="updateCharCount(this)" placeholder="Write your full story here in detail..."></textarea>
+                  <div class="govuk-character-count" id="char-counter">0 / 4000 characters</div>
+                </div>
+
+              </fieldset>
+
+              <button class="govuk-button govuk-button--secondary" type="button" onclick="goToStep(2)">Back</button>
+              <button class="govuk-button" type="button" onclick="goToStep(4)">Save and Continue</button>
+            </div>
+
+            <div class="form-step" id="step-4" style="display: none;">
+              <fieldset class="govuk-fieldset">
+                <legend class="govuk-fieldset__legend">Step 4: Financial & In-Game Currency Losses</legend>
+
+                <div class="govuk-form-group" id="group-loss">
+                  <label class="govuk-label" for="virtual-currency-loss">Estimated Direct Losses (In-Game Credits / Virtual Currency Units)</label>
+                  <span class="govuk-hint">Enter 0 if no virtual currency or paid passes were lost.</span>
+                  <input class="govuk-input govuk-input--width-10" id="virtual-currency-loss" type="number" value="0" onchange="calculateRealCurrency()">
+                </div>
+
+                <div class="govuk-form-group">
+                  <label class="govuk-label" for="gbp-conversion">Calculated Real-World GBP Equivalent (£)</label>
+                  <span class="govuk-hint">Estimated conversion value based on statutory virtual asset exchange rates.</span>
+                  <input class="govuk-input govuk-input--width-10" id="gbp-conversion" type="text" value="£0.00" readonly style="background-color:#f3f2f1;">
+                </div>
+
+                <div class="govuk-form-group">
+                  <label class="govuk-label">Primary Category of Financial Impact</label>
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="loss-type-gamepass" type="checkbox">
+                    <label class="govuk-checkboxes__label" for="loss-type-gamepass">Unfulfilled Gamepass Perks / Broken VIP Rank Privileges</label>
+                  </div>
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="loss-type-currency" type="checkbox">
+                    <label class="govuk-checkboxes__label" for="loss-type-currency">Unfairly Confiscated In-Game Bank Credits or Guild Funds</label>
+                  </div>
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="loss-type-work" type="checkbox">
+                    <label class="govuk-checkboxes__label" for="loss-type-work">Unpaid Development Labor (Scripts, Building, Uniform Design)</label>
+                  </div>
+                </div>
+
+              </fieldset>
+
+              <button class="govuk-button govuk-button--secondary" type="button" onclick="goToStep(3)">Back</button>
+              <button class="govuk-button" type="button" onclick="goToStep(5)">Save and Continue</button>
+            </div>
+
+            <div class="form-step" id="step-5" style="display: none;">
+              <fieldset class="govuk-fieldset">
+                <legend class="govuk-fieldset__legend">Step 5: Prior Internal Dispute Attempts</legend>
+
+                <p class="govuk-body">Under CAAPC Regulations, complainants must confirm whether they attempted internal dispute resolution with the pixel company staff prior to filing standard litigation.</p>
+
+                <div class="govuk-form-group" id="group-internal-ticket">
+                  <label class="govuk-label">Did you open an official Discord / Support Ticket with the server staff?</label>
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" name="ticket-choice" id="ticket-yes" type="radio" value="Yes">
+                    <label class="govuk-radios__label" for="ticket-yes">Yes, but staff ignored, closed, or deleted my ticket without resolution.</label>
+                  </div>
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" name="ticket-choice" id="ticket-no" type="radio" value="No">
+                    <label class="govuk-radios__label" for="ticket-no">No, because I was instantly banned / blacklisted from the server.</label>
+                  </div>
+                </div>
+
+                <div class="govuk-form-group" id="group-ticket-id">
+                  <label class="govuk-label" for="ticket-channel-id">Discord Ticket Channel ID / Thread Reference (Optional)</label>
+                  <span class="govuk-hint">Numerical ID of the ticket thread or appeal ticket reference code.</span>
+                  <input class="govuk-input govuk-input--width-20" id="ticket-channel-id" type="text" placeholder="11920384810293">
+                </div>
+
+              </fieldset>
+
+              <button class="govuk-button govuk-button--secondary" type="button" onclick="goToStep(4)">Back</button>
+              <button class="govuk-button" type="button" onclick="goToStep(6)">Save and Continue</button>
+            </div>
+
+            <div class="form-step" id="step-6" style="display: none;">
+              <fieldset class="govuk-fieldset">
+                <legend class="govuk-fieldset__legend">Step 6: Attach Screenshots & Audit Proof</legend>
+
+                <div class="govuk-form-group">
+                  <label class="govuk-label">Upload Audit Screenshots, Gyazo Links, or Chat Logs</label>
+                  <span class="govuk-hint">Accepted formats: PNG, JPG, PDF, TXT logs (Max single upload: 25MB)</span>
+                  <div class="govuk-dropzone" onclick="document.getElementById('file-input').click()">
+                    <p class="govuk-body" style="margin-bottom:5px;"><strong>Click to attach proof files</strong> or drag and drop files here</p>
+                    <span class="govuk-hint" style="margin-bottom:0;">Attach ban messages, purchase receipts, or chat logs</span>
+                    <input type="file" id="file-input" style="display:none;" onchange="handleFileSelect(this)">
+                  </div>
+                  <div id="file-display" style="margin-top:12px; font-size:15px; color:var(--govuk-blue); font-weight:bold;"></div>
+                </div>
+
+                <div class="govuk-form-group" id="group-gyazo-link">
+                  <label class="govuk-label" for="evidence-link">External Image / Gyazo / Imgur Link (Optional)</label>
+                  <span class="govuk-hint">Provide direct links to online image uploads or video recordings.</span>
+                  <input class="govuk-input" id="evidence-link" type="url" placeholder="https://gyazo.com/sample_proof_image_hash">
+                </div>
+
+              </fieldset>
+
+              <button class="govuk-button govuk-button--secondary" type="button" onclick="goToStep(5)">Back</button>
+              <button class="govuk-button" type="button" onclick="goToStep(7)">Save and Continue</button>
+            </div>
+
+            <div class="form-step" id="step-7" style="display: none;">
+              <fieldset class="govuk-fieldset">
+                <legend class="govuk-fieldset__legend">Step 7: Verification & Statutory Declaration</legend>
+
+                <p class="govuk-body">Please review your dossier summary below before submitting to the central compliance registry at <strong>caapc.org.uk</strong>.</p>
+
+                <table class="govuk-summary-table">
+                  <tr>
+                    <th>Reporting User:</th>
+                    <td id="review-name">-</td>
+                  </tr>
+                  <tr>
+                    <th>Platform & Contact:</th>
+                    <td id="review-platform">-</td>
+                  </tr>
+                  <tr>
+                    <th>Target Pixel Company:</th>
+                    <td id="review-company">-</td>
+                  </tr>
+                  <tr>
+                    <th>Company ID & Owner:</th>
+                    <td id="review-id-owner">-</td>
+                  </tr>
+                  <tr>
+                    <th>Written Reason:</th>
+                    <td id="review-reason">-</td>
+                  </tr>
+                  <tr>
+                    <th>Claimed Losses:</th>
+                    <td id="review-loss">-</td>
+                  </tr>
+                  <tr>
+                    <th>Internal Ticket History:</th>
+                    <td id="review-ticket">-</td>
+                  </tr>
+                  <tr>
+                    <th>Evidence Attached:</th>
+                    <td id="review-evidence">-</td>
+                  </tr>
+                </table>
+
+                <div class="govuk-form-group" id="group-declaration">
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="declaration-check" type="checkbox">
+                    <label class="govuk-checkboxes__label" for="declaration-check">
+                      I solemnly declare that all provided usernames, server IDs, written accounts, and audit evidence are truthful and accurate under Virtual Asset Governance Standards.
+                    </label>
+                  </div>
+                </div>
+
+              </fieldset>
+
+              <button class="govuk-button govuk-button--secondary" type="button" onclick="goToStep(6)">Back</button>
+              <button class="govuk-button" type="button" onclick="submitFinalComplaint()">Submit Complaint</button>
+            </div>
+
+          </form>
+
+        </div>
+
+        <div id="processing-screen">
+          <h1 class="govuk-heading-xl">Submitting Dossier to CAAPC Database...</h1>
+          <p class="govuk-body">Transmitting complaint data to the Central Authority Against Pixel Crime server registry...</p>
+          <div class="govuk-spinner"></div>
+          <div class="processing-status-log" id="status-console">
+            [CAAPC-SYS] Initializing TLS handshake with caapc.org.uk core API...<br>
+          </div>
+        </div>
+
+        <div id="confirmation-panel">
+
+          <div class="govuk-panel govuk-panel--confirmation">
+            <h1 class="govuk-panel__title">Complaint Submitted</h1>
+
+            <div class="govuk-panel__body">
+              Complaint Submitted, but we hope you realise this does absolutely fuck all, you terminally online wet wipe.
+            </div>
+
+            <div class="govuk-panel__reference">
+              Docket Reference Code: <strong id="final-ref-code">CAAPC-2026-99214-PXL</strong>
+            </div>
+          </div>
+
+          <h2 class="govuk-heading-l">Statutory Next Steps & Total Waste of Time</h2>
+
+          <p class="govuk-body">Your submission has been catalogued, cryptographically signed with a government PKI key, and immediately routed into a digital trash compactor (<code>#garbage-bin-404</code>) that no human, bot, or server admin will ever open.</p>
+
+          <div class="govuk-inset-text">
+            <strong>Pixel Enterprise SLA Note:</strong> The pixel company owner is currently a pimply 13-year-old child screaming at his mum for pizza rolls while failing year 8 algebra. Expected ticket resolution time: <strong>When hell freezes over, you absolute clown.</strong>
+          </div>
+
+          <p class="govuk-body">Your imaginary rank as "Chief Deputy Officer" will remain revoked, your stolen £2.50 gamepass will stay broken forever, and the power-tripping Middle Rank who banned you is currently laughing at your ticket while eating cold nuggets in his bedroom.</p>
+
+          <div class="punchline-notice-box">
+            <h3 class="govuk-heading-m" style="color: var(--govuk-error-red); margin-top:0;">Statutory Notice of Utter Futility & Absolute Embarrassment</h3>
+            <p class="govuk-body"><strong>It is the official, legally binding recommendation of His Majesty's Government that you pull yourself together, grow up, and stop being a pathetic, snivelling little crybaby.</strong></p>
+            <p class="govuk-body">You are a functioning human being who just filled out a 7-step government legal dossier because a teenager stripped your fake badge in a lego simulator. You are an absolute baseline melon, a professional victim, and a walking advertisement for vitamin D deficiency.</p>
+            <p class="govuk-body" style="margin-bottom: 0;"><strong>Mandatory Executive Order:</strong> Turn off your glowing RGB monitor, throw your headset in the bin, open your front door, and go outside to touch, smell, and ingest actual physical grass. You absolute turnip.</p>
+          </div>
+
+          <div style="margin-top: 40px; padding-top: 25px; border-top: 2px solid var(--govuk-grey-border);">
+            <button class="govuk-button" onclick="window.location.reload();">Submit Another Embarrassing Whine</button>
+            <button class="govuk-button govuk-button--secondary" onclick="window.print();">Print Certificate of Total Sadness</button>
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="govuk-grid-column-one-third">
+
+        <div class="govuk-sidebar-card">
+          <h3 class="govuk-sidebar-card__title">Governance Guidelines</h3>
+          <ul class="govuk-sidebar-card__list">
+            <li><a href="#act-modal" class="govuk-breadcrumbs__link" onclick="toggleAccordion(1)">Pixel HR Code of Conduct 2024</a></li>
+            <li><a href="#act-modal" class="govuk-breadcrumbs__link" onclick="toggleAccordion(2)">Virtual Currency Protections</a></li>
+            <li><a href="#act-modal" class="govuk-breadcrumbs__link" onclick="toggleAccordion(3)">In-Game Server Treaty Standards</a></li>
+          </ul>
+        </div>
+
+        <div class="govuk-sidebar-card">
+          <h3 class="govuk-sidebar-card__title">CAAPC Live Registry Stats</h3>
+          <ul class="govuk-sidebar-card__list">
+            <li>Active Pixel Group Disputes: <strong>24,891</strong></li>
+            <li>Ignored Discord Tickets: <strong>24,891</strong></li>
+            <li>Enforcement Action Rate: <strong>0.00%</strong></li>
+            <li>Grass Touched This Week: <strong>0 Times</strong></li>
+          </ul>
+        </div>
+
+        <div class="govuk-sidebar-card">
+          <h3 class="govuk-sidebar-card__title">Authority Contact Information</h3>
+          <p class="govuk-body-s">
+            Primary Domain: <strong>caapc.org.uk</strong><br>
+            Central Discord: <code>discord.gg/caapc</code><br>
+            Compliance Hours: When server admins finish homework
+          </p>
+        </div>
+
+        <h3 class="govuk-heading-m" style="margin-top: 30px;">Statutory Legislation Accordion</h3>
+        
+        <div class="govuk-accordion">
+          
+          <div class="govuk-accordion__section">
+            <div class="govuk-accordion__header" onclick="toggleAccordion(1)">
+              <span>Section 14: Fake Rank Disputes</span>
+              <span id="acc-icon-1">+</span>
+            </div>
+            <div class="govuk-accordion__content" id="acc-content-1">
+              Under Section 14, no virtual server owner shall be legally bound to respect virtual promotions, chief officer roles, or roleplay ranks granted inside a video game.
+            </div>
+          </div>
+
+          <div class="govuk-accordion__section">
+            <div class="govuk-accordion__header" onclick="toggleAccordion(2)">
+              <span>Section 22: Broken Gamepasses</span>
+              <span id="acc-icon-2">+</span>
+            </div>
+            <div class="govuk-accordion__content" id="acc-content-2">
+              If a pixel company owner breaks a custom gamepass script and ignores your Discord messages, CAAPC will log the complaint directly into an unread text document.
+            </div>
+          </div>
+
+          <div class="govuk-accordion__section">
+            <div class="govuk-accordion__header" onclick="toggleAccordion(3)">
+              <span>Section 99: Touch Grass Doctrine</span>
+              <span id="acc-icon-3">+</span>
+            </div>
+            <div class="govuk-accordion__content" id="acc-content-3">
+              Mandates that any user spending more than 4 hours arguing with a teenage server admin over imaginary titles must turn off their monitor and go outside.
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+
+  <footer class="govuk-footer">
+    <div class="govuk-footer__container">
+      <div>
+        <ul class="govuk-footer__links">
+          <li><a class="govuk-footer__link" href="#">Privacy Policy</a></li>
+          <li><a class="govuk-footer__link" href="#">Terms of Virtual Service</a></li>
+          <li><a class="govuk-footer__link" href="#">Accessibility Statement</a></li>
+          <li><a class="govuk-footer__link" href="#">Pixel Freedom of Information</a></li>
+        </ul>
+        <span>All contents provided under the <strong>Open Government Pixel Governance License v3.0</strong>.</span>
+      </div>
+      <div>
+        <p>© Central Authority Against Pixel Crime (caapc.org.uk) 2026</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    /* Global Application State Object */
+    const state = {
+      currentStep: 1,
+      maxSteps: 7,
+      attachedFile: null
+    };
+
+    /* High Contrast Toggle Switch */
+    function toggleContrast() {
+      document.body.classList.toggle('high-contrast');
+    }
+
+    /* Accessibility Text Resizer */
+    let currentFontSize = 19;
+    function adjustTextSize(delta) {
+      currentFontSize = Math.min(Math.max(14, currentFontSize + delta), 25);
+      document.documentElement.style.fontSize = currentFontSize + 'px';
+    }
+
+    /* Freeform Textarea Character Counter */
+    function updateCharCount(textarea) {
+      const count = textarea.value.length;
+      document.getElementById('char-counter').innerText = `${count} / 4000 characters`;
+    }
+
+    /* Currency Loss Calculator */
+    function calculateRealCurrency() {
+      const credits = parseFloat(document.getElementById('virtual-currency-loss').value) || 0;
+      // Satyrical conversion rate: 10,000 Credits = £1.25 GBP
+      const realGBP = (credits * 0.000125).toFixed(2);
+      document.getElementById('gbp-conversion').value = `£${realGBP}`;
+    }
+
+    /* Accordion Toggle Switch */
+    function toggleAccordion(id) {
+      const content = document.getElementById(`acc-content-${id}`);
+      const icon = document.getElementById(`acc-icon-${id}`);
+      if (content.style.display === 'block') {
+        content.style.display = 'none';
+        icon.innerText = '+';
+      } else {
+        content.style.display = 'block';
+        icon.innerText = '−';
+      }
+    }
+
+    /* Multi-step Wizard Navigation Handler */
+    function goToStep(targetStep) {
+      if (targetStep > state.currentStep && !validateStep(state.currentStep)) return;
+
+      // Hide error box
+      document.getElementById('error-summary').style.display = 'none';
+
+      // Hide current step panel
+      document.getElementById(`step-${state.currentStep}`).style.display = 'none';
+      document.getElementById(`step-nav-${state.currentStep}`).classList.remove('govuk-step-nav__item--active');
+      document.getElementById(`step-nav-${state.currentStep}`).classList.add('govuk-step-nav__item--completed');
+
+      // Update current step
+      state.currentStep = targetStep;
+
+      // Show target step panel
+      document.getElementById(`step-${state.currentStep}`).style.display = 'block';
+      document.getElementById(`step-nav-${state.currentStep}`).classList.add('govuk-step-nav__item--active');
+
+      // Populate review table if stepping into Step 7
+      if (state.currentStep === 7) {
+        populateReview();
+      }
+
+      window.scrollTo(0, 150);
+    }
+
+    /* Comprehensive Validation Engine */
+    function validateStep(step) {
+      const errors = [];
+      clearErrors();
+
+      if (step === 1) {
+        if (!document.getElementById('user-handle').value.trim()) {
+          errors.push({ id: 'user-handle', group: 'group-username', msg: 'Enter your platform handle / gaming username' });
+        }
+        if (!document.getElementById('user-id-number').value.trim()) {
+          errors.push({ id: 'user-id-number', group: 'group-userid', msg: 'Enter your numeric user account ID' });
+        }
+        if (!document.getElementById('contact-discord').value.trim()) {
+          errors.push({ id: 'contact-discord', group: 'group-contact-discord', msg: 'Enter a valid communication handle / Discord tag' });
+        }
+        if (!document.getElementById('platform-type').value) {
+          errors.push({ id: 'platform-type', group: 'group-platform-type', msg: 'Select the gaming platform or ecosystem' });
+        }
+      }
+
+      if (step === 2) {
+        if (!document.getElementById('target-group-name').value.trim()) {
+          errors.push({ id: 'target-group-name', group: 'group-target-name', msg: 'Enter the target pixel company or enterprise name' });
+        }
+        if (!document.getElementById('target-group-id').value.trim()) {
+          errors.push({ id: 'target-group-id', group: 'group-target-id', msg: 'Enter the company identifier or server ID' });
+        }
+      }
+
+      if (step === 3) {
+        if (document.getElementById('complaint-reason').value.trim().length < 15) {
+          errors.push({ id: 'complaint-reason', group: 'group-reason', msg: 'Provide a full written account of your complaint (minimum 15 characters)' });
+        }
+      }
+
+      if (step === 5) {
+        const selectedRadio = document.querySelector('input[name="ticket-choice"]:checked');
+        if (!selectedRadio) {
+          errors.push({ id: 'ticket-yes', group: 'group-internal-ticket', msg: 'Select an option regarding internal Discord support tickets' });
+        }
+      }
+
+      if (errors.length > 0) {
+        showErrors(errors);
+        return false;
+      }
+      return true;
+    }
+
+    /* Render Inline & Summary Errors */
+    function showErrors(errors) {
+      const list = document.getElementById('error-summary-list');
+      list.innerHTML = '';
+
+      errors.forEach(err => {
+        const group = document.getElementById(err.group);
+        if (group) {
+          group.classList.add('govuk-form-group--error');
+          const span = document.createElement('span');
+          span.className = 'govuk-error-message';
+          span.innerText = `Error: ${err.msg}`;
+          group.insertBefore(span, group.children[1]);
+        }
+        const li = document.createElement('li');
+        li.innerHTML = `<a href="#${err.id}">${err.msg}</a>`;
+        list.appendChild(li);
+      });
+
+      document.getElementById('error-summary').style.display = 'block';
+      window.scrollTo(0, 100);
+    }
+
+    /* Clear Existing Form Errors */
+    function clearErrors() {
+      document.querySelectorAll('.govuk-form-group--error').forEach(el => el.classList.remove('govuk-form-group--error'));
+      document.querySelectorAll('.govuk-error-message').forEach(el => el.remove());
+    }
+
+    /* Handle Dropzone File Attachment */
+    function handleFileSelect(input) {
+      if (input.files && input.files[0]) {
+        state.attachedFile = input.files[0].name;
+        document.getElementById('file-display').innerText = `Attached Proof File: ${input.files[0].name} (${(input.files[0].size / 1024).toFixed(1)} KB)`;
+      }
+    }
+
+    /* Populate Step 7 Final Review Summary Table */
+    function populateReview() {
+      const userHandle = document.getElementById('user-handle').value;
+      const userId = document.getElementById('user-id-number').value;
+      const platform = document.getElementById('platform-type').value;
+      const discord = document.getElementById('contact-discord').value;
+      const targetCompany = document.getElementById('target-group-name').value;
+      const targetId = document.getElementById('target-group-id').value;
+      const targetOwner = document.getElementById('target-owner-name').value || 'Unknown/Unlisted';
+      const reason = document.getElementById('complaint-reason').value;
+      const lossCredits = document.getElementById('virtual-currency-loss').value || '0';
+      const lossGBP = document.getElementById('gbp-conversion').value;
+      
+      const ticketChoice = document.querySelector('input[name="ticket-choice"]:checked');
+      const ticketText = ticketChoice ? ticketChoice.value : 'Not specified';
+
+      const fileDisplay = state.attachedFile ? state.attachedFile : 'No direct file attached';
+      const linkDisplay = document.getElementById('evidence-link').value ? ` | Link: ${document.getElementById('evidence-link').value}` : '';
+
+      document.getElementById('review-name').innerText = `${userHandle} (Account ID: ${userId})`;
+      document.getElementById('review-platform').innerText = `${platform} (Contact: ${discord})`;
+      document.getElementById('review-company').innerText = targetCompany;
+      document.getElementById('review-id-owner').innerText = `Server/Group ID: ${targetId} | Owner: ${targetOwner}`;
+      document.getElementById('review-reason').innerText = reason;
+      document.getElementById('review-loss').innerText = `${lossCredits} Credits / Virtual Currency Units (${lossGBP})`;
+      document.getElementById('review-ticket').innerText = ticketText;
+      document.getElementById('review-evidence').innerText = `${fileDisplay}${linkDisplay}`;
+    }
+
+    /* Submit Final Complaint Controller & Terminal Execution */
+    function submitFinalComplaint() {
+      if (!document.getElementById('declaration-check').checked) {
+        showErrors([{ id: 'declaration-check', group: 'group-declaration', msg: 'You must check the statutory declaration box before proceeding.' }]);
+        return;
+      }
+
+      // Hide form
+      document.getElementById('form-wizard-container').style.display = 'none';
+
+      // Show console screen
+      const procScreen = document.getElementById('processing-screen');
+      procScreen.style.display = 'block';
+      window.scrollTo(0, 150);
+
+      const consoleLog = document.getElementById('status-console');
+      const logs = [
+        "[CAAPC-SYS] Establishing encrypted TLS link to caapc.org.uk central API...",
+        "[CAAPC-SYS] Parsing complainant digital profile and platform IDs...",
+        "[CAAPC-SYS] Validating target pixel enterprise server identifiers...",
+        "[CAAPC-SYS] Running sentiment analysis on written narrative statement...",
+        "[CAAPC-SYS] Cryptographically hashing attached audit log proof files...",
+        "[CAAPC-SYS] Generating statutory reference docket number...",
+        "[CAAPC-SYS] Purging complaint directly into #garbage-bin-404...",
+        "[CAAPC-SYS] Complaint successfully routed to muted channel. Finalizing..."
+      ];
+
+      let idx = 0;
+      const interval = setInterval(() => {
+        if (idx < logs.length) {
+          consoleLog.innerHTML += logs[idx] + "<br>";
+          consoleLog.scrollTop = consoleLog.scrollHeight;
+          idx++;
+        } else {
+          clearInterval(interval);
+          setTimeout(() => {
+            procScreen.style.display = 'none';
+            document.getElementById('final-ref-code').innerText = 'CAAPC-2026-' + Math.floor(10000 + Math.random() * 90000) + '-PXL';
+            document.getElementById('confirmation-panel').style.display = 'block';
+            window.scrollTo(0, 100);
+          }, 700);
+        }
+      }, 450);
+    }
+  </script>
+</body>
+</html>
